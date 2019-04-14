@@ -60,8 +60,6 @@ enum { VGMSTREAM_MAX_SUBSONGS = 65535 };
 #include <libswresample/swresample.h>
 #endif
 
-#include <clHCA.h>
-
 #include "coding/g72x_state.h"
 #include "coding/nwa_decoder.h"
 
@@ -1159,23 +1157,6 @@ typedef struct {
 typedef struct {
     NWAData *nwa;
 } nwa_codec_data;
-
-
-typedef struct {
-    STREAMFILE *streamfile;
-    clHCA_stInfo info;
-
-    signed short *sample_buffer;
-    size_t samples_filled;
-    size_t samples_consumed;
-    size_t samples_to_discard;
-
-    void* data_buffer;
-
-    unsigned int current_block;
-
-    void* handle;
-} hca_codec_data;
 
 #ifdef VGM_USE_FFMPEG
 typedef struct {

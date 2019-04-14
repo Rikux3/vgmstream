@@ -421,9 +421,6 @@
     <ClCompile Include="meta\halpst.c">
       <Filter>meta\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="meta\hca.c">
-      <Filter>meta\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="meta\hd3_bd3.c">
       <Filter>meta\Source Files</Filter>
     </ClCompile>
@@ -1118,9 +1115,6 @@
       <Filter>coding\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="coding\g7221_decoder.c">
-      <Filter>coding\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="coding\hca_decoder.c">
       <Filter>coding\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="coding\ima_decoder.c">

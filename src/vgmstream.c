@@ -318,7 +318,6 @@ VGMSTREAM * (*init_vgmstream_functions[])(STREAMFILE *streamFile) = {
     init_vgmstream_kt_g1l,
     init_vgmstream_kt_wiibgm,
     init_vgmstream_ktss,
-    init_vgmstream_hca,
     init_vgmstream_ps2_svag_snk,
     init_vgmstream_ps2_vds_vdm,
     init_vgmstream_x360_cxs,
@@ -2665,10 +2664,6 @@ static STREAMFILE * get_vgmstream_average_bitrate_channel_streamfile(VGMSTREAM *
         return data ? data->ov_streamfile.streamfile : NULL;
     }
 #endif
-    if (vgmstream->coding_type == coding_CRI_HCA) {
-        hca_codec_data *data = vgmstream->codec_data;
-        return data ? data->streamfile : NULL;
-    }
 #ifdef VGM_USE_FFMPEG
     if (vgmstream->coding_type == coding_FFmpeg) {
         ffmpeg_codec_data *data = vgmstream->codec_data;

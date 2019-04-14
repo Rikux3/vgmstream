@@ -189,14 +189,6 @@ void flush_ea_mt(VGMSTREAM *vgmstream);
 void seek_ea_mt(VGMSTREAM * vgmstream, int32_t num_sample);
 void free_ea_mt(ea_mt_codec_data *data, int channels);
 
-/* hca_decoder */
-hca_codec_data *init_hca(STREAMFILE *streamFile);
-void decode_hca(hca_codec_data * data, sample * outbuf, int32_t samples_to_do);
-void reset_hca(hca_codec_data * data);
-void loop_hca(hca_codec_data * data);
-void free_hca(hca_codec_data * data);
-int test_hca_key(hca_codec_data * data, unsigned long long keycode);
-
 #ifdef VGM_USE_VORBIS
 /* ogg_vorbis_decoder */
 void decode_ogg_vorbis(ogg_vorbis_codec_data * data, sample_t * outbuf, int32_t samples_to_do, int channels);
